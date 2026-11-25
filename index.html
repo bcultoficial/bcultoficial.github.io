@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BCULT</title>
+<meta name="description" content="BCULT · Raw bodybuilding. Culturismo y cultura de gimnasio con Carlos González y Guillem Abela. BCULT Team: coaching completo y preparación de competición.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE occasion: raw, cercano, de gimnasio; comunidad antes que venta
+   IDEA la sala de pesas con el logo oficial B·CULT
+   PICTURE logo oficial grande y una línea fina con los principios rodando, separados por el punto rojo
+   COLOUR negro goma dominante, hueso para texto y bandas, rojo de marca #9b2424 como acento
+   TYPE Archivo Black + Archivo
+   LAYOUT hero con logo arriba y barra a sangre debajo; bandas alternas negro/hueso; en móvil, una columna */
+:root{color-scheme:dark;--bg:#0f0f0e;--ink:#ece6da;--mute:#a8a397;--iron:#1c1b19;--edge:#34332f;--bone:#ece6da;--boneInk:#141412;--blue:#9b2424;--blue2:#7a1b1b}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Archivo,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+img,svg{max-width:100%}
+.band{padding-block:clamp(48px,7vw,104px);padding-inline:max(5vw,16px)}
+.in{max-width:1240px;margin:0 auto}
+h1,h2,h3{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;letter-spacing:-.02em;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px,5vw,52px);margin-bottom:18px}
+h3{font-size:22px;margin-bottom:8px}
+p{margin:0 0 14px;max-width:64ch}
+.lead{font-size:clamp(17px,1.6vw,20px);color:var(--mute)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;transition:background .15s,border-color .15s}
+.btn.p{background:var(--blue);color:#fff}
+.btn.p:hover{background:var(--blue2)}
+.btn.g{border-color:var(--edge);color:var(--ink)}
+.btn.g:hover{border-color:var(--ink)}
+.btn:focus-visible,nav a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.btn.off{opacity:.5;pointer-events:none}
+/* nav */
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--edge)}
+header .in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(5vw,16px);max-width:none}
+.logo{display:block;text-decoration:none}
+.logo img{display:block;height:34px;width:auto}
+nav{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:center}
+nav a{text-decoration:none;color:var(--mute);font-weight:500;font-size:15px;padding:6px 0}
+nav a:hover{color:var(--ink)}
+nav a.cta{color:#fff;background:var(--blue);padding:8px 16px;border-radius:999px}
+/* hero */
+.hero{padding-top:clamp(40px,6vw,80px);padding-bottom:0}
+.hero .brand{width:min(820px,100%)}
+.hero .brand img{display:block;width:100%;height:auto}
+.hero .sub{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px 48px;align-items:end;margin-top:22px}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.tick{margin-top:clamp(36px,5vw,64px);margin-inline:calc(-1 * max(5vw,16px));border-block:1px solid var(--edge);overflow:hidden;padding:12px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.trk{display:flex;width:max-content;animation:roll 38s linear infinite}
+.tick:hover .trk{animation-play-state:paused}
+.seq{display:flex;align-items:center;flex:none}
+.seq span{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.seq i{flex:none;width:6px;height:6px;margin:0 22px;border-radius:50%;background:var(--blue)}
+@keyframes roll{to{transform:translateX(-50%)}}
+/* bone band */
+.bone{background:var(--bone);color:var(--boneInk)}
+.bone .lead,.bone .mute{color:#57544c}
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{padding:22px;border-radius:16px;border:1px solid var(--edge);background:var(--iron)}
+.bone .card{background:#fff;border-color:#d8d1c3}
+.card p{margin:0;color:var(--mute);font-size:16px}
+.bone .card p{color:#57544c}
+.phead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 48px;align-items:end;margin-bottom:28px}
+.phead h2{margin:0}
+.pil{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pil article{position:relative;padding:clamp(22px,3vw,36px);border-radius:18px;background:var(--iron);border:1px solid var(--edge);overflow:hidden}
+.pil article.p1{background:var(--blue);border-color:var(--blue)}
+.pt{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.pt h3{margin:0;font-size:clamp(26px,3vw,36px)}
+.dot{flex:none;width:18px;height:18px;border-radius:50%;background:var(--blue)}
+.p1 .dot{background:var(--ink)}
+.claim{font-size:clamp(19px,2vw,23px);font-weight:700;margin-bottom:10px}
+.pil article>p:not(.claim){color:var(--mute)}
+.p1 article>p,.pil .p1>p:not(.claim){color:#f3d9d9}
+.pil ul{list-style:none;margin:16px 0 0;padding:16px 0 0;border-top:1px solid color-mix(in srgb,var(--ink) 16%,transparent);display:grid;gap:8px}
+.pil li{position:relative;padding-left:20px;font-size:15px}
+.pil li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.p1 li::before{background:var(--ink)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:32px 64px;align-items:start}
+/* people */
+.person{display:grid;grid-template-columns:88px minmax(0,1fr);gap:18px;align-items:start}
+.mono{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;font:400 32px "Archivo Black",sans-serif;background:var(--blue);color:#fff}
+.mono.b{background:var(--boneInk);color:var(--bone)}
+.pig{display:none;margin-top:10px;font-weight:700;font-size:15px;color:var(--blue);text-decoration:none}
+.pig.on{display:inline-block}
+.pig:hover{text-decoration:underline}
+.role{font-size:14px;color:#57544c;margin-bottom:8px;font-weight:700}
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+.steps li{position:relative;padding:22px;border-radius:16px;background:var(--iron);border:1px solid var(--edge)}
+.steps li b{display:block;font-size:18px;margin-bottom:6px}
+.steps li span{color:var(--mute);font-size:15px}
+.steps .n{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font:400 18px "Archivo Black",sans-serif;margin-bottom:14px}
+.duo{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px 28px;align-items:center;margin-top:16px;padding:clamp(20px,3vw,32px);border-radius:18px;background:var(--blue);color:#fff}
+.duo h3{font-size:clamp(22px,2.6vw,30px);margin-bottom:8px}
+.duo p{margin:0;color:#f3d9d9;max-width:70ch}
+.dm{display:flex;align-items:center}
+.dm .mono{width:64px;height:64px;font-size:22px;background:#fff;color:var(--blue2);border:3px solid var(--blue)}
+.dm .mono+.mono{margin-left:-14px}
+.note{margin-top:22px;padding:18px 22px;border-left:4px solid var(--blue);background:var(--iron);border-radius:0 12px 12px 0;color:var(--ink);max-width:none}
+/* social */
+.soc{display:flex;align-items:center;gap:16px;min-height:96px;padding:22px;border-radius:16px;text-decoration:none;background:#fff;border:1px solid #d8d1c3;transition:transform .15s,border-color .15s}
+.soc:hover{transform:translateY(-3px);border-color:var(--boneInk)}
+.soc svg{flex:none;width:34px;height:34px}
+.soc b{display:block;font-size:20px}
+.soc span{color:#57544c;font-size:15px}
+.soc.off{opacity:.55;pointer-events:none}
+/* cta */
+.final{background:var(--blue);color:#fff;text-align:left}
+.final .in{display:grid;grid-template-columns:minmax(0,1.4fr) auto;gap:24px;align-items:center}
+.final .lead{color:#f3d9d9}
+.final .btn.p{background:#fff;color:var(--blue2)}
+.final .btn.p:hover{background:var(--bone)}
+footer{padding:36px max(5vw,16px);border-top:1px solid var(--edge);color:var(--mute);font-size:15px}
+footer .in{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+@media(max-width:900px){.phead{grid-template-columns:minmax(0,1fr)}.g4,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:minmax(0,1fr)}.split{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.duo{grid-template-columns:minmax(0,1fr)}.pil{grid-template-columns:minmax(0,1fr)}nav a:not(.cta){display:none}.hero .sub,.final .in,.g2,.g4,.steps{grid-template-columns:minmax(0,1fr)}.hero .acts{justify-content:flex-start}.person{grid-template-columns:64px minmax(0,1fr)}.mono{width:64px;height:64px;font-size:24px}}
+@media(prefers-reduced-motion:reduce){.trk{animation:none;flex-wrap:wrap;width:auto}.seq{flex-wrap:wrap;row-gap:6px}.seq+.seq{display:none}.tick{mask-image:none;padding-inline:max(5vw,16px)}html{scroll-behavior:auto}.soc,.btn{transition:none}.soc:hover{transform:none}}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <a class="logo" href="#inicio"><img src="logo-bcult.svg" alt="BCULT"></a>
+  <nav>
+    <a href="#que-es">Qué es</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#team">BCULT Team</a>
+    <a href="#contenido">Contenido</a>
+    <a class="cta js-form" href="#team">Conócenos</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="band hero" id="inicio" style="padding-bottom:0"><div class="in">
+  <h1 class="brand"><img src="logo-bcult.svg" alt="BCULT · Bodybuilding Culture"></h1>
+  <div class="sub">
+    <p class="lead">Raw bodybuilding. Culturismo y cultura de gimnasio contados como son: entrevistas, conversaciones y entrenos de verdad, sin filtros ni discursos de gurú.</p>
+    <div class="acts">
+      <a class="btn p js-form" href="#team">Quiero entrenar con BCULT Team</a>
+      <a class="btn g js-yt" href="#contenido">Ver en YouTube</a>
+    </div>
+  </div>
+</div>
+<div class="tick" role="marquee" aria-label="Personas, no números · Cercanía · Progreso · RAW · Comunidad · Sin filtros · Sin gurús"><div class="trk" aria-hidden="true"><div class="seq"><span>Personas, no números</span><i></i><span>Cercanía</span><i></i><span>Progreso</span><i></i><span>RAW</span><i></i><span>Comunidad</span><i></i><span>Sin filtros</span><i></i><span>Sin gurús</span><i></i></div><div class="seq"><span>Personas, no números</span><i></i><span>Cercanía</span><i></i><span>Progreso</span><i></i><span>RAW</span><i></i><span>Comunidad</span><i></i><span>Sin filtros</span><i></i><span>Sin gurús</span><i></i></div></div></div>
+</section>
+
+<section class="band bone" id="que-es"><div class="in">
+  <div class="split">
+    <div>
+      <h2>Qué es BCULT</h2>
+      <p class="lead">Un proyecto audiovisual de culturismo hecho por dos tíos que entrenan. Queremos crear comunidad, no vender humo.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card"><h3>Entrevistas</h3><p>Conversaciones largas con gente del culturismo, sin guion de anuncio.</p></div>
+      <div class="card"><h3>Entrenos</h3><p>Sesiones reales, con lo que sale bien y lo que no.</p></div>
+      <div class="card"><h3>Vídeos largos</h3><p>YouTube como casa principal: temas a fondo, con calma.</p></div>
+      <div class="card"><h3>Vlogs y clips</h3><p>El día a día del gimnasio en formato corto.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band" id="pilares"><div class="in">
+  <div class="phead">
+    <h2>Cómo lo entendemos</h2>
+    <p class="lead">Cuatro ideas que están detrás de cada vídeo que subimos y de cada persona que entrenamos.</p>
+  </div>
+  <div class="pil">
+    <article class="p1">
+      <div class="pt"><span class="dot"></span><h3>Filosofía</h3></div>
+      <p class="claim">Culturismo sin postureo.</p>
+      <p>Contamos el culturismo como es: trabajo, constancia y criterio. Lo bueno y lo que no sale en las fotos.</p>
+      <ul><li>Honestidad aunque no sea lo que quieres oír.</li><li>Si no somos lo que necesitas, te lo decimos y te orientamos.</li></ul>
+    </article>
+    <article>
+      <div class="pt"><span class="dot"></span><h3>Equipo</h3></div>
+      <p class="claim">Personas, no números.</p>
+      <p>Antes de hablar de macros, preguntamos por tu vida. Entras a formar parte de BCULT, no a comprar un PDF.</p>
+      <ul><li>Te contestamos nosotros, siempre, por tu nombre.</li><li>Te llevamos los dos, juntos, de principio a fin.</li></ul>
+    </article>
+    <article>
+      <div class="pt"><span class="dot"></span><h3>Cultura</h3></div>
+      <p class="claim">El gimnasio, como se vive dentro.</p>
+      <p>Entrevistas, conversaciones y entrenos reales. Trato de compañeros de gimnasio, no de gurú.</p>
+      <ul><li>Contenido para aprender y para pasar el rato.</li><li>Gente del culturismo contando su historia.</li></ul>
+    </article>
+    <article>
+      <div class="pt"><span class="dot"></span><h3>Experiencia</h3></div>
+      <p class="claim">Más allá de la pantalla.</p>
+      <p>BCULT no se queda en redes. Queremos que se viva en persona, con la comunidad que se está formando.</p>
+      <ul><li>Lo estamos preparando.</li><li>Síguenos para enterarte el primero.</li></ul>
+    </article>
+  </div>
+</div></section>
+
+<section class="band bone" id="nosotros"><div class="in">
+  <h2>Quiénes somos</h2>
+  <p class="lead" style="margin-bottom:24px">Dos cofundadores y dos coaches, al mismo nivel. Trabajamos juntos y cada uno suma su punto de vista.</p>
+  <div class="grid g2">
+    <div class="card person"><div class="mono">GA</div><div><h3>Guillem Abela</h3><p class="role">Cofundador · Coach</p><p>Su punto de vista: el del culturista que ya ha competido y sabe lo que es prepararse para la tarima.</p><a class="pig js-ig" data-k="igGuillem" href="#nosotros">@guillemabela_pro</a></div></div>
+    <div class="card person"><div class="mono">CG</div><div><h3>Carlos González</h3><p class="role">Cofundador · Coach</p><p>Su punto de vista: el del posing, cómo presentar el físico sobre la tarima con poses, transiciones y presencia.</p><a class="pig js-ig" data-k="igCarlos" href="#nosotros">@cgrposing</a></div></div>
+  </div>
+</div></section>
+
+<section class="band" id="team"><div class="in">
+  <div class="split">
+    <div>
+      <h2>BCULT Team</h2>
+      <p class="lead">Nuestra asesoría. No te toca uno u otro: te llevamos los dos, juntos, para que tu físico y tu forma de presentarlo mejoren por todos los lados.</p>
+      <a class="btn p js-form" href="#team">Habla con nosotros</a>
+    </div>
+    <div class="grid g2">
+      <div class="card"><h3>Coaching completo</h3><p>Entrenamiento y nutrición adaptados a ti, con seguimiento cercano.</p></div>
+      <div class="card"><h3>Preparación de competición</h3><p>Para quien quiere subirse a una tarima y llegar en su mejor versión.</p></div>
+    </div>
+  </div>
+  <h3 style="margin:48px 0 16px">Cómo empezamos</h3>
+  <ol class="steps">
+    <li><div class="n">1</div><b>Formulario corto</b><span>Doce preguntas, 2-3 minutos. Para saber quién eres.</span></li>
+    <li><div class="n">2</div><b>Te escribimos</b><span>Por WhatsApp, nosotros en persona, en menos de 24 h.</span></li>
+    <li><div class="n">3</div><b>Llamada</b><span>15-20 minutos para conocerte y ver si encajamos.</span></li>
+    <li><div class="n">4</div><b>Empezamos</b><span>Formulario inicial y tu planificación, hecha por los dos para ti.</span></li>
+  </ol>
+  <div class="duo">
+    <div class="dm"><span class="mono">GA</span><span class="mono">CG</span></div>
+    <div><h3>Dos coaches, un mismo objetivo: tú</h3><p>En cada asesoría estamos los dos por igual. Planificamos, revisamos y ajustamos tu proceso juntos: entrenamiento, nutrición, físico y presentación. Cada uno suma su mirada, la de quien ha competido y la del posing, para que mejores por todos los lados.</p></div>
+  </div>
+  <p class="note">El formulario corto no te compromete a nada. Y si en la llamada vemos que no somos lo que necesitas, te lo decimos con honestidad y te orientamos.</p>
+</div></section>
+
+<section class="band bone" id="contenido"><div class="in">
+  <h2>Síguenos</h2>
+  <p class="lead">Todo lo que hacemos se publica aquí.</p>
+  <div class="grid g3" id="social"></div>
+</div></section>
+
+<section class="band final"><div class="in">
+  <div>
+    <h2>¿Entrenamos juntos?</h2>
+    <p class="lead">Cuéntanos quién eres en 2-3 minutos. Nosotros te escribimos.</p>
+  </div>
+  <a class="btn p js-form" href="#team">Ir al formulario</a>
+</div></section>
+</main>
+
+<footer><div class="in">
+  <span><b style="color:var(--ink)">BCULT</b> · Raw bodybuilding</span>
+  <span>Contacto: <a href="mailto:bcult.info@gmail.com">bcult.info@gmail.com</a></span>
+</div></footer>
+
+<script>
+{
+/* ============ CONFIGURACIÓN: pega aquí vuestros enlaces ============ */
+const CONFIG = {
+  formulario: "https://docs.google.com/forms/d/e/1FAIpQLScyOA4t5DC2wW4_VpJwI2nwDGv_2bOsvx7KzgBWnndlLtrdew/viewform",   // Formulario CORTO de BCULT Team (Google Forms)
+  youtube:    "https://www.youtube.com/@bcult.oficial",   // https://www.youtube.com/@...
+  instagram:  "https://www.instagram.com/bcult.oficial/",   // https://www.instagram.com/...
+  tiktok:     "https://www.tiktok.com/@bcult.raw.bodybui",   // https://www.tiktok.com/@...
+  igGuillem:  "https://www.instagram.com/guillemabela_pro/",   // Instagram de Guillem
+  igCarlos:   "https://www.instagram.com/cgrposing/"    // Instagram de Carlos
+};
+/* =================================================================== */
+
+const ok = u => /^https:\/\//i.test(u || '');
+const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+const link = (el, u) => { if (ok(u)) { el.href = u; el.target = '_blank'; el.rel = 'noopener'; } };
+document.querySelectorAll('.js-form').forEach(a => link(a, CONFIG.formulario));
+document.querySelectorAll('.js-yt').forEach(a => link(a, CONFIG.youtube));
+document.querySelectorAll('.js-ig').forEach(a => { const u = CONFIG[a.dataset.k]; if (ok(u)) { link(a, u); a.classList.add('on'); } });
+
+const ic = {
+  yt:'<svg viewBox="0 0 24 24" fill="#e62117"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg>',
+  ig:'<svg viewBox="0 0 24 24" fill="none" stroke="#141412" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#141412"/></svg>',
+  tt:'<svg viewBox="0 0 24 24" fill="#141412"><path d="M16.6 3c.4 2.2 1.8 3.7 4 3.9v3.2a7.6 7.6 0 0 1-4-1.2v6.3A6 6 0 1 1 10.4 9v3.3a2.8 2.8 0 1 0 2 2.7V3z"/></svg>'
+};
+const soc = [
+  {k:'youtube', i:'yt', t:'YouTube', s:'@bcult.oficial'},
+  {k:'instagram', i:'ig', t:'Instagram', s:'@bcult.oficial'},
+  {k:'tiktok', i:'tt', t:'TikTok', s:'@bcult.raw.bodybui'}
+];
+document.getElementById('social').innerHTML = soc.map(x => {
+  const u = CONFIG[x.k], live = ok(u);
+  return '<a class="soc' + (live ? '' : ' off') + '" href="' + (live ? esc(u) : '#') + '"' + (live ? ' target="_blank" rel="noopener"' : ' aria-disabled="true"') + '>' +
+    ic[x.i] + '<div><b>' + x.t + '</b><span>' + (live ? x.s : 'Próximamente') + '</span></div></a>';
+}).join('');
+}
+</script>
+</body>
+</html>
